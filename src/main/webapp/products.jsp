@@ -27,14 +27,13 @@
 		
 		<c:forEach var="p" items="${products}">
 			<tr>
-				<td>${p.pNo}</td>
+				<td>${p.pno}</td>
 				<td>${p.pName}</td>
 				<td>${p.priceInEuro}</td>
 				<td><img src="${p.imageFile}" alt="${p.pName}"></td>
 				<td>${p.description}</td>
 				<td>
-			<form action=cart method="post">
-				<input type="text">
+			<form action=productsServlet method="post">
 				<button name="addToCart" value="${p}" type="submit"></button>
 			</form>
 				</td>

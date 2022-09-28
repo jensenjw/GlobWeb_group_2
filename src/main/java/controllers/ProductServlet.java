@@ -22,13 +22,17 @@ public class ProductServlet extends HttpServlet {
     	MockDatabase _db = new MockDatabase(); 
     	List<Product> products = _db.GetAll();
     	request.setAttribute("products", products);
-    	response.sendRedirect("products.jsp");
+    	//response.sendRedirect("products.jsp");
+    	request.getRequestDispatcher("products.jsp").forward(request, response);
     	
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+    	List<Product> products = (List<Product>) request.getAttribute("addToCart");
+    	request.getSession().setAttribute("products", products);
+    	response.sendRedirect("cartServlet");
     }
 
 }

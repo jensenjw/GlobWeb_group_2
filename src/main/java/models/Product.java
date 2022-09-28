@@ -8,9 +8,9 @@ public class Product {
 	private String imageFile;
 	private String description;
 	
-	public Product(int pno, String pName, double priceInEuro, String imageFile, String description) {
+	public Product(int pNo, String pName, double priceInEuro, String imageFile, String description) {
 		super();
-		this.pno = pno;
+		this.pno = pNo;
 		this.pName = pName;
 		this.priceInEuro = priceInEuro;
 		this.imageFile = imageFile;

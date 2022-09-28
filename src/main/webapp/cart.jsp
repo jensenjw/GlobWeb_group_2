@@ -20,9 +20,9 @@
 	
 		</fmt:bundle>
 	<table>
-		<c:forEach var="product" items="${yourProducts}">
+		<c:forEach var="product" items="${products}">
 			<tr>
-				<td>${product.pNo}</td>
+				<td>${product.pno}</td>
 				<td>${product.pName}</td>
 				<td>${product.priceInEuro}</td>
 				<td><img src=${product.imageFile} alt=${product.pName}></td>
