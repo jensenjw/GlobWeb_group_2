@@ -7,7 +7,10 @@ public class Product {
 	private double priceInEuro;
 	private String imageFile;
 	private Description pDescription;
+	private String description;
 	
+	
+
 	public Product(int pno, String pName, double priceInEuro, String imageFile, Description pDescription) {
 		super();
 		this.pno = pno;
@@ -16,6 +19,16 @@ public class Product {
 		this.imageFile = imageFile;
 		this.pDescription = pDescription;
 	}
+	
+	public Product(int pno, String pName, double priceInEuro, String imageFile, String description) {
+		super();
+		this.pno = pno;
+		this.pName = pName;
+		this.priceInEuro = priceInEuro;
+		this.imageFile = imageFile;
+		this.description = description;
+	}
+	
 
 	public int getPno() {
 		return pno;
@@ -55,6 +68,14 @@ public class Product {
 
 	public void setpDescription(Description pDescription) {
 		this.pDescription = pDescription;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	@Override
