@@ -1,6 +1,11 @@
+<%@page import="models.Product"%>
+<%@page import="java.util.ArrayList"%>
+
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -18,19 +23,19 @@
 		<h1>
 			Product works
 		</h1>
-		
 		<table>
-		<c:forEach var=products items="${yourProducts}">
+		
+		<c:forEach var="p" items="${products}">
 			<tr>
-				<td>${product.pNo}</td>
-				<td>${product.pName}</td>
-				<td>${product.priceInEuro}</td>
-				<td><img src="${product.imageFile}" alt="${product.pName}"></td>
-				<td>${product.description}</td>
+				<td>${p.pNo}</td>
+				<td>${p.pName}</td>
+				<td>${p.priceInEuro}</td>
+				<td><img src="${p.imageFile}" alt="${p.pName}"></td>
+				<td>${p.description}</td>
 				<td>
 			<form action=cart method="post">
 				<input type="text">
-				<button name="addToCart" value="${products}" type="submit"></button>
+				<button name="addToCart" value="${p}" type="submit"></button>
 			</form>
 				</td>
 				</tr>

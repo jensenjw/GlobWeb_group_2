@@ -20,7 +20,7 @@
 	
 		</fmt:bundle>
 	<table>
-		<c:forEach var=product items="${yourProducts}">
+		<c:forEach var="product" items="${yourProducts}">
 			<tr>
 				<td>${product.pNo}</td>
 				<td>${product.pName}</td>
