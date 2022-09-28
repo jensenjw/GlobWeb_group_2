@@ -11,7 +11,7 @@
 <body>
 	<p><jsp:include page="chooseLanguage.jsp" /></p>
 
-	<fmt:bundle basename="language.Messages">
+	<fmt:bundle basename="i18n.Messages">
  
 		<h1>
 			<fmt:message key="ShopName" />
