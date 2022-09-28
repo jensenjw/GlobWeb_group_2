@@ -14,15 +14,8 @@
 	<fmt:bundle basename="language.Messages">
  
 		<h1>
-			<fmt:message key="ShopName" />
+			Product works
 		</h1>
-		<p>
-			<fmt:message key="Greetings" />
-		</p>
-		
-		<a href="products.jsp"> 
-			<fmt:message key="Products" />
-		</a>
 
 	</fmt:bundle>
 
