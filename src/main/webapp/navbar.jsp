@@ -2,15 +2,15 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <fmt:bundle basename="i18n.Messages">
-	<li><a href="index.jsp"> 
+	<li><a href="index.html"> 
 			<fmt:message key="Home" />
 		</a>
 	</li>
-	<li><a href="products.jsp"> 
+	<li><a href="productsServlet"> 
 			<fmt:message key="Products" />
 		</a>
 	</li>
-	<li><a href="cart.jsp"> 
+	<li><a href="cartServlet"> 
 			<fmt:message key="Cart" />
 		</a>
 	</li>

@@ -15,7 +15,6 @@
 	</ul>
 	<fmt:bundle basename="i18n.Messages">
 		
-		
 		<h1>
 			<fmt:message key="ShopName" />
 		</h1>
@@ -23,7 +22,7 @@
 			<fmt:message key="Greetings" />
 		</p>
 		
-		<a href="products.jsp"> 
+		<a href="productsServlet"> 
 			<fmt:message key="Products" />
 		</a>
 
