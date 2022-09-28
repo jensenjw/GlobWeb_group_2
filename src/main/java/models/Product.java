@@ -6,19 +6,7 @@ public class Product {
 	private String pName;
 	private double priceInEuro;
 	private String imageFile;
-	private Description pDescription;
 	private String description;
-	
-	
-
-	public Product(int pno, String pName, double priceInEuro, String imageFile, Description pDescription) {
-		super();
-		this.pno = pno;
-		this.pName = pName;
-		this.priceInEuro = priceInEuro;
-		this.imageFile = imageFile;
-		this.pDescription = pDescription;
-	}
 	
 	public Product(int pno, String pName, double priceInEuro, String imageFile, String description) {
 		super();
@@ -62,14 +50,6 @@ public class Product {
 		this.imageFile = imageFile;
 	}
 
-	public Description getpDescription() {
-		return pDescription;
-	}
-
-	public void setpDescription(Description pDescription) {
-		this.pDescription = pDescription;
-	}
-	
 	public String getDescription() {
 		return description;
 	}
@@ -81,7 +61,7 @@ public class Product {
 	@Override
 	public String toString() {
 		return "Product [pno=" + pno + ", pName=" + pName + ", priceInEuro=" + priceInEuro + ", imageFile=" + imageFile
-				+ ", pDescription=" + pDescription + "]";
+				+ ", pDescription=" + description + "]";
 	}
 	
 	

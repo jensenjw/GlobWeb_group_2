@@ -24,7 +24,7 @@
 				<td>${product.pName}</td>
 				<td>${product.priceInEuro}</td>
 				<td><img src=${product.imageFile} alt=${product.pName}></td>
-				<td>${product.pDescription}</td>
+				<td>${product.description}</td>
 				<td>
 			<form action=cart method="post">
 				<button name="remove" value="${product}" type="submit"></button>
