@@ -1,5 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+    <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +20,7 @@
 	
 		</fmt:bundle>
 	<table>
-		<fmt:foreach var=product items="${yourProducts}">
+		<c:forEach var=product items="${yourProducts}">
 			<tr>
 				<td>${product.pNo}</td>
 				<td>${product.pName}</td>
@@ -31,7 +33,7 @@
 			</form>
 				</td>
 				</tr>
-		</fmt:foreach>
+		</c:forEach>
 	</table>
 </body>
 </html>
