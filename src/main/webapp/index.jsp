@@ -10,9 +10,12 @@
 
 <body>
 	<p><jsp:include page="chooseLanguage.jsp" /></p>
-
+	
 	<fmt:bundle basename="i18n.Messages">
- 
+		<ul> 
+			<jsp:include page="navbar.jsp" />
+		</ul>
+		
 		<h1>
 			<fmt:message key="ShopName" />
 		</h1>

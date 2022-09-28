@@ -12,7 +12,9 @@
 	<p><jsp:include page="chooseLanguage.jsp" /></p>
 
 	<fmt:bundle basename="language.Messages">
- 
+		<ul>
+			<jsp:include page="navbar.jsp" />
+		</ul>
 		<h1>
 			Product works
 		</h1>
