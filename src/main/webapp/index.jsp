@@ -1,6 +1,6 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%--  <%@ taglib prefix="dat152" uri="dat152-tags"%> --%>
+<%-- <%@ taglib uri="dat152.tld" prefix="dat152"%> --%>
 
 <!DOCTYPE html>
 <html>
@@ -26,8 +26,8 @@
 		<a href="productsServlet"> 
 			<fmt:message key="Products" />
 		</a>
-
 	</fmt:bundle>
-<!-- <dat152:RomanNumeral since="2008"/> -->
+	
+<!-- <dat152:RomanNumeral since="2008"></dat152:RomanNumeral> -->
 </body>
 </html>
