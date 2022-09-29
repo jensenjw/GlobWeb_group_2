@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import data.MockDatabase;
 import models.Product;
 
 @WebServlet("/cartServlet")
@@ -18,22 +19,20 @@ public class CartServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-    	List<Product> products = (List<Product>) request.getAttribute("addToCart");
-    	System.out.println(request.getAttribute("addToCart"));
-    	request.setAttribute("products", products);
-    	request.getRequestDispatcher("cart.jsp").forward(request, response);
-    	
+    	List<Product> itemCart = (List<Product>) request.getSession().getAttribute("itemCart");
+    	request.getSession().setAttribute("itemCart", itemCart);
+    	response.sendRedirect("cart.jsp");    	
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-    	List<Product> products = (List<Product>) request.getAttribute("cartProducts");
-    	Product product = (Product) request.getAttribute("remove");
-    	products.remove(product);
-    	request.setAttribute("cartProducts", products);
     	
-    	response.sendRedirect("cartServlet");
+    	List<Product> itemCart = (List<Product>) request.getSession().getAttribute("itemCart");
+    	String index = request.getParameter("remove_product");
+    	itemCart.remove(Integer.parseInt(index));
+    	request.getSession().setAttribute("itemCart", itemCart);
+    	response.sendRedirect("cart.jsp");
     }
 
 }

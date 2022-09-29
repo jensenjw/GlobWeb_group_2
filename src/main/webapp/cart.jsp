@@ -15,21 +15,22 @@
 				<jsp:include page="navbar.jsp" />
 			</ul>
 			<h1>
-				Your products
+				<fmt:message key="YourCart" />
 			</h1>
 	
 		
 		<table>
-			<c:forEach var="product" items="${products}">
+			<c:forEach var="p" items="${itemCart}" varStatus="loop">
 				<tr>
-					<td>${product.pno}</td>
-					<td>${product.pName}</td>
-					<td>${product.priceInEuro}</td>
-					<td><img src="${product.imageFile}" alt="${product.pName}"></td>
-					<td>${product.description}</td>
+					<td>${p.pno}</td>
+					<td><fmt:message key="${p.pName}" /></td>
+					<td>${p.priceInEuro}</td>
+					<td><img src="${p.imageFile}" alt="<fmt:message key="${p.pName}" />"></td>
+					<td><fmt:message key="${p.description}" /></td>
 					<td>
-				<form action=cart method="post">
-					<button name="remove" value="${product}" type="submit"></button>
+				<form action=cartServlet method="post">
+					<input type="hidden" name="remove_product" value="${loop.index}" />
+					<button name="remove" type="submit"><fmt:message key="RemoveButton" /></button>
 				</form>
 					</td>
 					</tr>

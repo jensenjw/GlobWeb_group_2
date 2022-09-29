@@ -34,7 +34,8 @@
 				<td><fmt:message key="${p.description}" /></td>
 				<td>
 			<form action=productsServlet method="post">
-				<button name="addToCart" value="${p}" type="submit"><fmt:message key="AddToCart" /></button>
+				<input type="hidden" name="product_id" value="${p.pno}" />
+				<button name="addToCart" type="submit"><fmt:message key="AddToCart" /></button>
 			</form>
 				</td>
 				</tr>

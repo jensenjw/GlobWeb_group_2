@@ -20,7 +20,12 @@ public class MockDatabase {
 	}
 	
 	public Product Get(int pno) {
-		return products.get(pno);
+		for(Product p : products) { 
+			   if(p.getPno() == (pno)) { 
+				   return p;
+			   }
+			}
+		return null;
 	}
 	
 	public List<Product> GetAll() {
