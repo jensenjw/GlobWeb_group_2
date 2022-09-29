@@ -10,7 +10,7 @@
 </head>
 <body>
 	<p><jsp:include page="chooseLanguage.jsp" /></p>
-	<fmt:bundle basename="language.Messages">
+	<fmt:bundle basename="i18n.Messages">
 			<ul>
 				<jsp:include page="navbar.jsp" />
 			</ul>
@@ -18,22 +18,23 @@
 				Your products
 			</h1>
 	
-		</fmt:bundle>
-	<table>
-		<c:forEach var="product" items="${products}">
-			<tr>
-				<td>${product.pno}</td>
-				<td>${product.pName}</td>
-				<td>${product.priceInEuro}</td>
-				<td><img src=${product.imageFile} alt=${product.pName}></td>
-				<td>${product.description}</td>
-				<td>
-			<form action=cart method="post">
-				<button name="remove" value="${product}" type="submit"></button>
-			</form>
-				</td>
-				</tr>
-		</c:forEach>
-	</table>
+		
+		<table>
+			<c:forEach var="product" items="${products}">
+				<tr>
+					<td>${product.pno}</td>
+					<td>${product.pName}</td>
+					<td>${product.priceInEuro}</td>
+					<td><img src="${product.imageFile}" alt="${product.pName}"></td>
+					<td>${product.description}</td>
+					<td>
+				<form action=cart method="post">
+					<button name="remove" value="${product}" type="submit"></button>
+				</form>
+					</td>
+					</tr>
+			</c:forEach>
+		</table>
+	</fmt:bundle>
 </body>
 </html>

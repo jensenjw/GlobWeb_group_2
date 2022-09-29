@@ -31,7 +31,7 @@ public class ProductServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     	List<Product> products = (List<Product>) request.getAttribute("addToCart");
-    	request.getSession().setAttribute("products", products);
+    	request.setAttribute("products", products);
     	response.sendRedirect("cartServlet");
     }
 

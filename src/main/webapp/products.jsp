@@ -19,22 +19,22 @@
 	<ul> 
 		<jsp:include page="navbar.jsp" />
 	</ul>
-	<fmt:bundle basename="language.Messages">
+	<fmt:bundle basename="i18n.Messages">
 		<h1>
-			Product works
+			<fmt:message key="ShopName" />
 		</h1>
 		<table>
 		
 		<c:forEach var="p" items="${products}">
 			<tr>
 				<td>${p.pno}</td>
-				<td>${p.pName}</td>
+				<td><fmt:message key="${p.pName}" /></td>
 				<td>${p.priceInEuro}</td>
-				<td><img src="${p.imageFile}" alt="${p.pName}"></td>
-				<td>${p.description}</td>
+				<td><img src="${p.imageFile}" alt="<fmt:message key="${p.pName}" />"></td>
+				<td><fmt:message key="${p.description}" /></td>
 				<td>
 			<form action=productsServlet method="post">
-				<button name="addToCart" value="${p}" type="submit"></button>
+				<button name="addToCart" value="${p}" type="submit"><fmt:message key="AddToCart" /></button>
 			</form>
 				</td>
 				</tr>
