@@ -16,7 +16,7 @@ public class MockDatabase {
 		products.add(new Product(102, "Nails", 1.5, "", "NailsDescription"));
 		products.add(new Product(103, "Planks", 3.5, "", "PlanksDescription"));
 		products.add(new Product(104, "Glue", 5, "", "GlueDescription"));
-		products.add(new Product(105, "Saw", 15, "", "Sawescription"));
+		products.add(new Product(105, "Saw", 15, "", "SawDescription"));
 	}
 	
 	public Product Get(int pno) {
