@@ -17,7 +17,7 @@ public class RomanNumeralTag extends SimpleTagSupport {
 	public void doTag() throws IOException
 	{
 		JspWriter out = getJspContext().getOut();
-		out.print("@" + intToRoman(Integer.parseInt(since)) + "MMXXII");
+		out.print("@" + intToRoman(Integer.parseInt(since)) + "-" + "MMXXII");
 	}
 	
 	/**
