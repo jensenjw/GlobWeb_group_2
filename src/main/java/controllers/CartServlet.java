@@ -12,6 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import data.MockDatabase;
 import models.Product;
 
+/**
+@author Markus Løtveit
+@author Jan William Jensen
+*/
+
 @WebServlet("/cartServlet")
 public class CartServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;

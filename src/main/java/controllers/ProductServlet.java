@@ -13,6 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 import data.MockDatabase;
 import models.Product;
 
+/**
+@author Jan William Jensen
+*/
+
 @WebServlet("/productsServlet")
 public class ProductServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;

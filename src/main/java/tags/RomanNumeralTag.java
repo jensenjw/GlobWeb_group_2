@@ -5,6 +5,10 @@ import java.io.IOException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
+/**
+@author Markus Løtveit
+*/
+
 public class RomanNumeralTag extends SimpleTagSupport {
 	
 	private String since = "2020";
@@ -16,6 +20,9 @@ public class RomanNumeralTag extends SimpleTagSupport {
 		out.print("@" + intToRoman(Integer.parseInt(since)) + "MMXXII");
 	}
 	
+	/**
+	Method takes a number and turns it into a roman numeral. 
+	*/
 	public String intToRoman(int num)   
 	{  
 	int[] values = {1000,900,500,400,100,90,50,40,10,9,5,4,1};  

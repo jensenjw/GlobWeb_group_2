@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.jstl.core.Config;
 
 /**
+ * @author Jan William Jensen
  * Servlet implementation class SetLanguageServlet.
  */
 @WebServlet("/SetLanguage")

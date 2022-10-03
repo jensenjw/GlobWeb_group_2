@@ -16,6 +16,7 @@ import javax.servlet.jsp.jstl.core.Config;
 
 
 /**
+ * @author Jan William Jensen
  * Servlet implementation class InitSessionServlet.
  */
 @WebServlet("/index.html")

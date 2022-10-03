@@ -1,5 +1,9 @@
 package models;
 
+/**
+@author Jan William Jensen
+*/
+
 public class Product {
 	
 	private int pno;

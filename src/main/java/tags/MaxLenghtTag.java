@@ -8,10 +8,17 @@ import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.JspFragment;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
+/**
+@author Markus Løtveit
+*/
+
 public class MaxLenghtTag extends SimpleTagSupport {
 	
-private int max = 10;
+private String max = "10";
 	
+/**
+Check if the lenght of the tag body is longer than max characters and trims it if it is, otherwise print out the entire text.
+*/
 	@Override
 	public void doTag() throws IOException, JspException
 	{
@@ -26,18 +33,20 @@ private int max = 10;
 		}
 		else
 		{
-			out.print(bodyText.substring(0, Math.min(bodyText.length(), max)) + "...");
+			out.print(bodyText.substring(0, Math.min(bodyText.length(), Integer.parseInt(max))) + "...");
 		}
 	
 	}
 
-	public int getMax() {
+	public String getMax() {
 		return max;
 	}
 
-	public void setMax(int max) {
+	public void setMax(String max) {
 		this.max = max;
 	}
+
+	
 
 	
 	

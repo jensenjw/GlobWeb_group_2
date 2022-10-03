@@ -4,7 +4,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<%-- <%@ taglib uri="dat152.tld" prefix="dat152"%> --%>
+<%@ taglib uri="/WEB-INF/tlds/dat152.tld" prefix="dat152"%> 
 
 
 
@@ -32,7 +32,7 @@
 				<td><fmt:message key="${p.pName}" /></td>
 				<td>${p.priceInEuro}</td>
 				<td><img src="${p.imageFile}" alt="<fmt:message key="${p.pName}" />"></td>
-				<td><fmt:message key="${p.description}" /></td>
+				<td><dat152:MaxLenght max="10"><fmt:message key="${p.description}" /></dat152:MaxLenght></td>
 				<td>
 			<form action=productsServlet method="post">
 				<input type="hidden" name="product_id" value="${p.pno}" />
@@ -44,6 +44,6 @@
 	</table>
 
 	</fmt:bundle>
-<!-- <dat152:RomanNumeral since="2008"></dat152:RomanNumeral> -->
+ <dat152:RomanNumeral since="2020"></dat152:RomanNumeral> 
 </body>
 </html>

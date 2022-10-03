@@ -1,5 +1,9 @@
 package models;
 
+/**
+@author Jan William Jensen
+*/
+
 public class Description {
 	
 	private int langCode;

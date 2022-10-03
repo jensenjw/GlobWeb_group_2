@@ -6,6 +6,10 @@ import java.util.List;
 
 import models.Product;
 
+/**
+@author Jan William Jensen
+*/
+
 public class MockDatabase {
 
 	List<Product> products = new ArrayList<Product>();

@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
     <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+     <%@ taglib uri="/WEB-INF/tlds/dat152.tld" prefix="dat152"%> 
     
 <!DOCTYPE html>
 <html>
@@ -26,7 +27,7 @@
 					<td><fmt:message key="${p.pName}" /></td>
 					<td>${p.priceInEuro}</td>
 					<td><img src="${p.imageFile}" alt="<fmt:message key="${p.pName}" />"></td>
-					<td><fmt:message key="${p.description}" /></td>
+				<td><dat152:MaxLenght max="10"><fmt:message key="${p.description}" /></dat152:MaxLenght></td>
 					<td>
 				<form action=cartServlet method="post">
 					<input type="hidden" name="remove_product" value="${loop.index}" />
@@ -38,6 +39,7 @@
 		</table>
 	</fmt:bundle>
 	
-	<!-- <dat152:RomanNumeral since="2008"></dat152:RomanNumeral> -->
+	<br>
+	 <dat152:RomanNumeral since="2020"></dat152:RomanNumeral> 
 </body>
 </html>
